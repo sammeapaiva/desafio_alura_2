@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Jogo da Forca</title>
+		<link rel="icon" href="img/forca.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/menu_pgn_jogo.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/pgn_jogo.css">
+
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+			<input type="checkbox" id="check">
+			<label for="check" id="icone"><p>Menu</p><img src="img/setaesquerda.png" class="seta_menu"><img src="img/seta.png" class="seta"></label>
+			<div class="barra">
+				<nav>
+					<a href="pgn_inicial.html"><div class="link">Home</div></a>
+					<a href="pgn_lista_palavra.html"><div class="link">Lista de Palavras</div></a>
+				</nav>	
+			</div>
+		</header>
+
+		<main>
+
+			<div class="container_backg">
+				<img src="img/background.png" class="imgbackg">
+				<div class = "tira1" onmouseover="move(this, 30)">
+					<img src="img/backgroundtira.png" id ="tira1" class ="abaTira1">
+				</div>
+				<section class="botoes retiraElemento" onmouseleave="back(this, 30)">
+					<div class="botaoNovoJogo"></div>
+					<div class="botaoDesistir"></div>
+				</section>
+			</div>
+
+			<div class="container_imagens">
+				<img class="img" src="img/base.png">
+				<img class="img retiraElemento" src="img/tronco.png">
+				<img class="img retiraElemento" src="img/corda.png">
+				<img class="img retiraElemento" src="img/cabeca.png">
+				<img class="img retiraElemento" src="img/corpo.png">
+				<img class="img retiraElemento" src="img/bracoesquerdo.png">
+				<img class="img retiraElemento" src="img/bracodireito.png">
+				<img class="img retiraElemento" src="img/pernaesquerda.png">
+				<img class="img retiraElemento" src="img/pernadireita.png">
+				<img class="img retiraElemento" src="img/olhos.png">
+			</div>
+
+		</main>
+
+		<script src="js/tira_de_papel.js"></script>
+		<script src="js/partes_do_corpo.js"></script>
+		<script src="js/erro_letra.js"></script>
+	</body>
+
+</html>

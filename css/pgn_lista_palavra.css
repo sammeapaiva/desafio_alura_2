@@ -1,0 +1,246 @@
+body{
+	background-image:url('desktop.jpg');
+	box-sizing: border-box;
+	font-family: 'Patrick Hand SC', sans-serif;
+
+	background-size: 120%;
+    background-position-x: 34%;
+}
+
+.blocoGeral{
+	margin: 0 auto;
+	background:rgb(231, 231, 168);
+
+	display:flex;
+	padding-bottom:15%;
+
+	width:65%;
+	height:auto;
+
+	animation-name: desce;
+	animation-duration: 2s;
+
+	position:relative;
+}
+
+@keyframes desce {
+	from{
+		top:-500px;
+	}
+
+	to{
+		top:0px;
+	}
+}
+
+.listaDeGrupos{
+	left:5%;
+
+	width:90%;
+	height:auto;
+	padding:5% 0;
+
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+
+	position:relative;
+}
+
+/*resolver problemas de grupos a mais estarem ultrapassando a página, que está em row*/
+
+.grupoInterno{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex:1 1 auto;
+	margin-right:5%;
+	margin-bottom:5%;
+}
+
+.grupoInterno:hover{
+	cursor:pointer;
+}
+
+.grupoInterno h1, .grupoInterno p{
+	font-size:30px;
+	color:black;
+	text-decoration:underline;
+}
+
+.grupoInterno h1:hover ~ .grupoInterno p{
+	/*vou fazer um efeito de só mostrar a lista quando hover*/
+}
+
+/*explicacao*/
+.explicacao{
+	width:40%;
+	height:auto;
+	padding:5% 5%;
+
+	position:relative;
+}
+
+.explicacao p{
+	font-size:40px;
+	color:gray;
+	text-decoration: underline;
+}
+
+/*botoes*/
+.botoesPrincipais{
+	bottom:5%;
+	width:100%;
+	height:auto;
+	display:flex;
+	justify-content: space-around;
+
+	position:absolute;
+}
+
+.botaoJogoAleatorio,.botaoNovosGrupos,.botaoNovasPalavras,.botaoNovoJogo{
+	width:30%;
+	height:auto;
+
+	padding:20px 0;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+
+	background-color:rgba(255,255,255, .05);
+	box-shadow:0 0.4rem 0 0 rgba(0,0,0,0.25);
+	backdrop-filter:blur(10px);
+	border-radius:8px;
+}
+
+.botaoNovasPalavras{
+	margin:0 auto;
+	position:absolute;
+	width:50%;
+	bottom:110%;
+}
+
+.botoesPrincipais p,.botaoNovasPalavras p{
+	font-size:30px;
+	color:rgb(55, 46, 46);
+	text-decoration: underline;
+}
+
+/*Configurações após clique em grupos*/
+.botaoNovoJogo{
+	display:none;
+	position:absolute;
+	right:5%;
+	width:40%;
+	bottom:110%;
+}
+
+.novaConfigBotaoNovasPalavras{
+	width:40%;
+	left:5%;
+}
+
+/*Configurações dos botões*/
+.botaoJogoAleatorio:active,.botaoNovosGrupos:active,.botaoNovasPalavras:active{
+	transform:translateY(0.3rem);
+	box-shadow:0 0.2rem rgba(0,0,0,0.25);
+}
+
+.botaoJogoAleatorio:hover,.botaoNovosGrupos:hover,.botaoNovasPalavras:hover{
+	cursor:pointer;
+}
+
+/*Configurações de apoio*/
+.retiraElemento{
+	display:none;
+}
+
+.apareceElemento{
+	display:block;
+}
+
+/*Configurações de tela*/
+@media screen and (max-width:992px){
+	body{
+		background-size:250%;
+		background-position-x:left;
+		background-position-y:-350px;
+	}
+	.blocoGeral{
+		padding-bottom:30%;
+	}
+	.explicacao p{
+		font-size:30px;
+	}
+}
+
+@media screen and (max-width:720px){
+	body{
+		background-size:400%;
+		background-position-x:left;
+		background-position-y:-350px;
+	}
+	.blocoGeral{
+		width:90%;
+	}
+
+	.grupoInterno h1, .grupoInterno p, 	.explicacao p, .botoesPrincipais p{
+		font-size:25px;	}
+
+	.botaoJogoAleatorio,.botaoNovosGrupos,.botaoNovasPalavras{
+		padding:10px 0;
+	}
+
+	.explicacao{
+		width:60%;
+	}
+}
+
+@media screen and (max-width:480px){
+	body{
+		background-size:500%;
+		background-position-x:left;
+		background-position-y:-350px;
+	}
+
+	.blocoGeral{
+		width:90%;
+		padding-bottom:40%;
+	}
+
+	.grupoInterno h1, .grupoInterno p, 	.explicacao p, .botoesPrincipais p{
+		font-size:20px;
+	}
+
+	.botaoJogoAleatorio,.botaoNovosGrupos,.botaoNovasPalavras{
+		padding:10px 0;
+	}
+
+	.explicacao{
+		width:60%;
+	}
+
+}
+
+@media screen and (max-width:300px){
+	.blocoGeral{
+		width:90%;
+		padding-bottom:70%;
+	}
+
+	.grupoInterno h1, .grupoInterno p, 	.explicacao p, .botoesPrincipais p{
+		font-size:16px;
+	}
+
+	.botaoJogoAleatorio,.botaoNovosGrupos,.botaoNovasPalavras{
+		padding:10px 0;
+	}
+
+	.explicacao{
+		width:60%;
+	}
+
+}
+/*até width 1400 a explicacao fica bacana, menor o botao fica encima, etcetc*/

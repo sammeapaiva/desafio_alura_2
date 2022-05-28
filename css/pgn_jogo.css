@@ -1,0 +1,181 @@
+body{
+	background-image:url('desktop.jpg');
+	box-sizing: border-box;
+}
+
+/*papel e forca*/
+.container_backg{
+	display:flex;
+	justify-content:center;
+	position:relative;
+}
+
+.imgbackg{
+	max-height:60%;
+	max-width:60%;
+	height:auto;
+	width:auto;
+	box-shadow: 10px 15px 5px rgb(0 0 0 / 33%);
+}
+
+.container_imagens{
+	display:inline-block;
+	justify-content:center;
+	position:absolute;
+
+	/*valores width e height de apoio*/
+	max-width:40%;
+	width:500px;
+	height:400px;
+	top:0;
+	left:35%;
+}
+
+.img{
+	display:inline-block;
+	position: absolute;
+	width:auto;
+	height:auto;
+	max-width:87%;
+}
+
+/*tiras*/
+.tira1{
+	top:65%;
+
+	display:block;
+	justify-content:center;
+	position:absolute;
+
+	width:60%;
+	height:16%;
+	margin:0 19%;
+}
+
+.abaTira1{
+	max-width:100%;
+	height:auto;
+	width:auto;
+
+	box-shadow: 5px -5px 6px rgba(0,0,0, 0.5);
+}
+
+/*tiras*/
+
+/*botoes*/
+.botoes{
+	top:60%;
+
+	height:44%;
+	width:45%;
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+
+	position:absolute;
+}
+
+.botaoNovoJogo{
+	display:inline-block;
+	width:30%;
+	height:30%;
+	margin-right:5%;
+	margin-top:-11%;
+
+	background-color:rgba(255,255,255, .05);
+	box-shadow:0 0.4rem 0 0 rgba(0,0,0,0.25);
+	backdrop-filter:blur(10px);
+	border-radius:8px;
+}
+
+.botaoDesistir{
+	display:inline-block;
+	width:30%;
+	height:30%;
+	margin-top:-11%;
+
+	background-color:rgba(255,255,255, .05);
+/*	box-shadow: 0 0 10px rgba(0,0,0, 0.25);*/
+	box-shadow:0 0.4rem 0 0 rgba(0,0,0,0.25);
+	backdrop-filter:blur(10px);
+	border-radius:8px;
+}
+
+.botaoNovoJogo:active,.botaoDesistir:active{
+	transform:translateY(0.3rem);
+	box-shadow:0 0.2rem rgba(0,0,0,0.25);
+}
+/*botoes*/
+
+/*Configurações*/
+.invisivel{
+	opacity:0;
+}
+
+.retiraElemento{
+	display:none;
+}
+
+.perdeShadow{
+	transition:300ms;
+	box-shadow: 2px -3px 3px rgb(0 0 0 / 30%);
+}
+
+.ganhaShadow{
+	transition:300ms;
+	box-shadow: 5px -5px 6px rgba(0,0,0, 0.5);
+}
+/*Configurações*/
+
+@media screen and (min-width: 821px) {
+	body{
+		background-size:120%;
+		background-position-x:34%;
+	}
+
+	.botoes{
+		width:60%;
+	}
+}
+
+@media screen and (max-width:820px){
+	body{
+		background:#F3F5FC;
+	}
+
+	.imgbackg{
+		max-height:90%;
+		max-width:90%; 
+	}
+
+	.container_imagens{
+		max-width:50%;
+		left:30%;
+	}
+
+	.tira1,.botoes{
+		top:70%;
+		width:90%;
+	}
+}
+
+@media screen and (min-width: 1472px) {
+	body{
+		background-size:120%;
+		background-position-x:34%;
+	}
+
+	.tira1{
+		top:70%;
+		width:auto;
+	}
+
+	.botoes{
+		width:48%;
+	}
+	.container_imagens{
+		left:40%;
+	}
+}
