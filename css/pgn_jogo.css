@@ -8,6 +8,7 @@ body{
 	display:flex;
 	justify-content:center;
 	position:relative;
+	padding-bottom:5%;
 }
 
 .imgbackg{
@@ -15,7 +16,7 @@ body{
 	max-width:60%;
 	height:auto;
 	width:auto;
-	box-shadow: 10px 15px 5px rgb(0 0 0 / 33%);
+	box-shadow: 20px 9px 15px rgb(0 0 0 / 25%);
 }
 
 .container_imagens{
@@ -57,10 +58,18 @@ body{
 	height:auto;
 	width:auto;
 
-	box-shadow: 5px -5px 6px rgba(0,0,0, 0.5);
+	box-shadow: 15px -5px 10px rgba(0,0,0, 0.5);
 }
-
 /*tiras*/
+
+/*bloco de tecla pressionada*/
+.teclas{
+	position:absolute;
+	background-color:lightgray;
+	width:20%;
+	height:20%;
+}
+/*bloco de tecla pressionada*/
 
 /*botoes*/
 .botoes{
@@ -78,26 +87,16 @@ body{
 }
 
 .botaoNovoJogo{
-	display:inline-block;
-	width:30%;
-	height:30%;
 	margin-right:5%;
-	margin-top:-11%;
-
-	background-color:rgba(255,255,255, .05);
-	box-shadow:0 0.4rem 0 0 rgba(0,0,0,0.25);
-	backdrop-filter:blur(10px);
-	border-radius:8px;
 }
 
-.botaoDesistir{
+.botaoNovoJogo,.botaoDesistir{
 	display:inline-block;
 	width:30%;
 	height:30%;
-	margin-top:-11%;
+	margin-top:-20%;
 
 	background-color:rgba(255,255,255, .05);
-/*	box-shadow: 0 0 10px rgba(0,0,0, 0.25);*/
 	box-shadow:0 0.4rem 0 0 rgba(0,0,0,0.25);
 	backdrop-filter:blur(10px);
 	border-radius:8px;
@@ -120,12 +119,12 @@ body{
 
 .perdeShadow{
 	transition:300ms;
-	box-shadow: 2px -3px 3px rgb(0 0 0 / 30%);
+	box-shadow: 19px -11px 14px rgb(0 0 0 / 30%);
 }
 
 .ganhaShadow{
 	transition:300ms;
-	box-shadow: 5px -5px 6px rgba(0,0,0, 0.5);
+	box-shadow: 15px -5px 10px rgba(0,0,0, 0.5);
 }
 /*Configurações*/
 

@@ -11,6 +11,7 @@ Array.prototype.slice.call(elementoAtual).forEach(function(pegaElementoAtual){
 
 	    var botaoNovasPalavras = document.querySelector('.botaoNovasPalavras');
 	    botaoNovasPalavras.classList.add('novaConfigBotaoNovasPalavras');
+	// rearranjo dos botoes
 
 	    botaoNovasPalavras.onclick = function(){
 	    	// while(contador <= quantidade) {

@@ -37,13 +37,7 @@
 // });
 
 // grupo pré-selecionado:geral
-var elementoAtual = document.getElementsByClassName("grupoInterno");
 
-Array.prototype.slice.call(elementoAtual).forEach(function(pegaElementoAtual){
-    pegaElementoAtual.addEventListener('click', function(e){
-       console.log(this.innerHTML);
-    });
-});
 
 var lista = document.querySelector('.listaDeGrupos');
 var blocoGeral = document.querySelector('.blocoGeral');
