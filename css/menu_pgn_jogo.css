@@ -1,4 +1,4 @@
-/* menu pgn jogos */
+/* menu */
 #icone{
 	z-index: 1;
 
@@ -145,6 +145,7 @@ nav a{
 	}
 }
 
+/*configurações de responsividade*/
 @media screen and (max-height: 1024px){
 	#check:checked ~ #icone{
 		z-index:3;
@@ -156,4 +157,29 @@ nav a{
 		margin-left:500%;
 	}
 }
-/* menu pgn jogos *
+@media screen and (max-width:820px){
+	#icone{
+		display:none;
+	}
+	.barra{
+		background-size:210px;
+		width:100%;
+		position:relative;
+		left:0;
+		z-index:2;
+	}
+	.barra nav {
+		position:relative;
+		padding:15% 0px;
+	}
+	.barra nav a .link{
+		font-size:20px;
+	    opacity: 1;
+	}
+	.link{
+		margin-left:0;
+		padding:3% 8%;
+	}
+}
+
+/* menu*
